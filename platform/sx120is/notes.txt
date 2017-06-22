@@ -1,0 +1,6 @@
+****************************************
+
+Camera depending notes: 
+
+- DryOS Camera
+- beta port !

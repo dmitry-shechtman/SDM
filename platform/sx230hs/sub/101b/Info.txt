@@ -1,0 +1,8 @@
+Dump SX230 firmware version 1.01B
+
+full 16MB dump by andyroo, dumped with cBasic udumper
+from http://www.box.net/shared/en4vymkb1efue34o5iex
+forum link: http://chdk.setepontos.com/index.php?topic=6397.msg72184#msg72184
+
+============
+start address: FF000000

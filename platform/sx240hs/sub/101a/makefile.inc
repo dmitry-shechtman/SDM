@@ -1,0 +1,30 @@
+# 0x3244 Found @ 0xfff40040
+PLATFORMID=12869
+PLATFORMOS=dryos
+
+override OPT_NEW_ZEBRA=1
+override OPT_NEW_OVERLAY=1
+override OPT_NEW_INVERT=1
+override OPT_NEW_STEREO_PB=1
+
+# address where wif or diskboot code will be loaded by camera
+MEMBASEADDR=0x1900
+
+# points to the start of the memory pool used by the firmware
+MEMISOSTART=0x193A24
+RESTARTSTART=0x50000
+# start of firmware
+ROMBASEADDR=0xFF000000
+
+MAXRAMADDR = 0x0fffffff
+
+# Found @ 0xffff3cf0
+NEED_ENCODED_DISKBOOT=8
+
+PLFLAGS=-DMEMBASEADDR=$(MEMBASEADDR) -DMEMISOSTART=$(MEMISOSTART) -DMEMISOSIZE=$(MEMISOSIZE)
+PLFLAGS+=-DRESTARTSTART=$(RESTARTSTART)
+
+# Found @ 0xffff3ce0
+KEYSYS=d4c
+
+PLATFORMOSVER=50

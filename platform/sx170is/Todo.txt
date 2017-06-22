@@ -1,0 +1,4 @@
+Check sensor size.
+Flash override.
+No Movie code.
+get_target_dir_num() code to return zero, check SDM implications.

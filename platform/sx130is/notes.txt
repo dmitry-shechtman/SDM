@@ -1,0 +1,7 @@
+<ALT>Key -> FaceButton
+default RAW extension change from CRW to CR2. Files with CR2 extension are visible through USB connection
+
+
+TODO
+
+optical zoom in video

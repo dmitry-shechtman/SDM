@@ -1,0 +1,83 @@
+#include "platform.h"
+
+void *hook_raw_fptr()
+{
+	return (void*)0; // What does this do? Doesn't seem to be called
+}
+
+void *hook_raw_ret_addr()
+{
+	return (void*)0; // What does this do? Doesn't seem to be called
+}
+
+char *hook_raw_image_addr()
+{
+	return (char*)0x107D58E0;
+}
+
+long hook_raw_size()
+{
+	return 0xEC04F0;
+}
+
+void *vid_get_viewport_live_fb()
+{
+	return (void*)0x0;
+}
+
+void *vid_get_bitmap_fb()
+{
+	return (void*)0x10361000; 
+}
+
+void *vid_get_viewport_fb()
+{
+	return (void*)0x10659DE0;
+}
+
+void *vid_get_viewport_fb_d()
+{
+	return (void*)(*(int*)0x4F30);  
+}
+
+long vid_get_bitmap_width()
+{
+	return 360;
+}
+
+long vid_get_bitmap_height()
+{
+	return 240;
+}
+
+long vid_get_bitmap_screen_width()
+{
+	return 360;
+}
+
+long vid_get_bitmap_screen_height()
+{
+	return 240;
+}
+
+int vid_get_viewport_width()
+{
+    return 360;
+}
+
+long vid_get_viewport_height()
+{
+	return 240;
+}
+
+char *camera_jpeg_count_str()
+{
+	return (char*)0x4506C;
+}
+
+
+long vid_get_bitmap_buffer_width() { return 360; }
+
+long vid_get_bitmap_buffer_height() { return 240; }
+
+

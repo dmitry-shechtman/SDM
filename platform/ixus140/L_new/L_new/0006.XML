@@ -1,0 +1,116 @@
+<?xml-stylesheet type="text/xsl" href="stereo_data.xsl"?>
+<ShootingInfo>
+<Link>IMG_0006.jpg</Link>
+<property>
+	<name>Sensor width</name>
+	<value>6.17</value>
+</property>
+<property>
+	<name>Shooting mode</name>
+	<value>2</value>
+</property>
+<property>
+	<name>ISO Market</name>
+	<value>100</value>
+</property>
+<property>
+	<name>ISO used real</name>
+	<value>61</value>
+</property>
+<property>
+	<name>ISO used sv96</name>
+	<value>411</value>
+</property>
+<property>
+	<name>EV Correction</name>
+	<value>0</value>
+</property>
+<property>
+	<name>Shutter speed Tv96</name>
+	<value>576</value>
+</property>
+<property>
+	<name>Real shutter speed</name>
+	<value>1/ 64</value>
+</property>
+<property>
+	<name>Aperture Av96</name>
+	<value>328</value>
+</property>
+<property>
+	<name>Real aperture</name>
+	<value>3.26</value>
+</property>
+<property>
+	<name>Brightness Bv96</name>
+	<value>-85</value>
+</property>
+<property>
+	<name>Hyperfocal distance</name>
+	<value>1583</value>
+</property>
+<property>
+	<name>Focus mode</name>
+	<value>0</value>
+</property>
+<property>
+	<name>Focus from sensor</name>
+	<value>369</value>
+</property>
+<property>
+	<name>Focus from Lens</name>
+	<value>334</value>
+</property>
+<property>
+	<name>Lens mechanical position</name>
+	<value>698</value>
+</property>
+<property>
+	<name>Rangefinder Focus from Lens</name>
+	<value>0</value>
+</property>
+<property>
+	<name>Circle of confusion</name>
+	<value>0.005</value>
+</property>
+<property>
+	<name>Near point</name>
+	<value>275</value>
+</property>
+<property>
+	<name>Far point</name>
+	<value>423</value>
+</property>
+<property>
+	<name>Depth of field</name>
+	<value>148</value>
+</property>
+<property>
+	<name>Zoom point</name>
+	<value>0</value>
+</property>
+<property>
+	<name>Real Focal length</name>
+	<value> 5.0</value>
+</property>
+<property>
+	<name>Equivalent Focal length</name>
+	<value> 28</value>
+</property>
+<property>
+	<name>User variable 1</name>
+	<value>0</value>
+</property>
+<property>
+	<name>User variable 2</name>
+	<value>0</value>
+</property>
+<property>
+	<name>User variable 3</name>
+	<value>0</value>
+</property>
+<property>
+	<name>User variable 4</name>
+	<value>0</value>
+</property>
+</ShootingInfo>

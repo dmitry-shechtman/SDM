@@ -1,0 +1,128 @@
+
+
+//VERIFY_SD780 
+General info:
+Digic IV, dryos, propset 2 (there may be digic IV specific stuff, but nothing found so far)
+14.7mp raw 4480*3348 12 bits/pixel
+Video is h264 NOT mjpeg
+ND filter only, NO iris
+
+Booting:
+Encoded diskboot required, FI2 "firm update" supported.
+With diskboot camera will always boot in play mode. Press halfshoot to switch to record.
+With FI2, you must boot in play mode in order to access the firm update menu.
+FI2 is encoded with the same parameters as SX10. (digic IV)
+
+Display:
+Live view is 360x240 
+Bitmap buffer is 720x240
+Bitmap color palette is different from other cameras. 
+
+Buttons:
+Direct print button is the ALT button. This can be assigned a function in the
+original canon firmware. Hold it down to access the canon firmware function
+Other keys use the standard mapping for cameras without an erase button.
+
+Features known BROKEN or NOT supported:
+Zebra
+Edge overlay
+Custom curves
+video compression overrides
+Microphone mute/unmute
+Jogdial control from CHDK
+Many other things are untested.
+
+Other issues:
+Pressing the shutter quickly with overrides enabled may result in incorrect white
+balance. It may also cause issues if the flash is automatically triggered.
+
+
+C 3  RO  Auto-Exposure Lock  
+4   Exposure bracket range (units: 96 per 1 stop extension)  
+C 5   AF Assist Beam Setting (0,1 = Off, On)  ie will use it
+C013 6  RO  Focus Mode (0,1,3,4,5 = Normal, Macro, Infinity, Manual, Super Macro [SX10])  
+kinda need more 8   AiAF Mode (0,1,2 = On, Off, FaceDetect)  
+C 11  RW  Auto-Focus Lock  
+12   AF Mode (0=single, 1=continuous) [SX10]  
+18  RW  Auto-Focus state after half-press (stays 1 if shoot_half is released!) (0 orange, >=1 green) (with AiAF=off only 0 or 1, with enabled AiAF or Face the value depends on position & number of AF boxes)  
+21   Auto Rotate (0,1 = Off, On)  
+23  RW  Av (for next shot, updates on half-shoot), 96 per 1 stop  
+24   Min Av (widest available aperture for current zoom, updates on half shoot), 96 per 1 stop. Note: on SD990, this includes the ND filter, if the ND was selected by the camera in an auto mode.  
+25   Min Av (widest available aperture for current zoom, updates on half shoot), 96 per 1 stop. Note: on SD990, this does not include the ND filter.  
+26  RW  User Av (user selected "market" value in M/Av modes, writes become effective on LCD on half shoot), 96 per 1 stop.  
+29   Bracket mode (0=none, 1=EV, 2=focus)  
+34   Bv  
+49,50   MODE Dial  
+55   Custom Color: Saturation (-2, -1, 0, 1, 2 = 254, 255, 0, 1, 2)  
+57   Picture Quality (0,1,2 = Superfine, Fine, Normal)  
+59   Custom Color: Contrast (-2, -1, 0, 1, 2 = 254, 255, 0, 1, 2)  
+60   Converter (0,1,2,4)  
+61   Language + video standard settings; Value=PAL; for NTSC=value-1 (A720)
+english=1, german=257, french=513, dutch=769, danish=1025, finnish=1281, italian=1537, norwegian=1793,ukrainian=2049, swedish=2305, spain=2561, chinese_simplified=2817, russian=3073, portuguese=3329, greek=3585, polish=3841, czech=4097, hungarian=4353, turkish=4609, chinese_traditional=4865, korean=5121, thai=5377, arabic=5633, romanian=5889, japanese=6145  
+63   Number of continuous shots taken last time  
+64  RW  Flash Sync Curtain (0=1st, 1=2nd)  
+65   Subject Dist 2 ("Near limit", most linear to real distance. You can get-and-set this prop_id, but it doesnt affect the near limit and/or the focus - tested with A590).  
+66  RW  Date stamp (0=Off, 1=Date, 2=Date & Time); only postcard mode  
+79   Delta Sv (What is this? Someone please add a description.)  
+91  RO  Digital Tele-Converter mode (>0 if enabled)  
+92  RO  Digital zoom source image width in pixels  
+94   Digital zoom mode (1="Standard", 0=any other mode)  
+95  RO  Digital Zoom depth (0--6: 0=none, 1--6 are for camera dependent zoom steps, higher number = higher magnification)  
+102  RO  Drive Mode (0,1,3,4: 0=single, 1=continuous, 2=continuous shooting AF [SX10], 3=FaceSelf-Timer [SX10], 4=custom timer [SX10])  
+103   changes with light only in M-Mode (-445 is completely dark and 328 is fully bright. Also depends on the current av/tv setting.)  
+105   Display mode (record mode only) (0,1,2,3 = show info icons, do not show info icons, LCD off, EVF)  
+107,207  RO,RW  Exposure Shift/Compensation (32 for 1/3 stop)  
+111   External flash state (0=Absent, 1=Present and turned on, 2=Present but turned off)  
+113   Focus bracket range (2=Smallest, 1=Medium, 0=largest)  
+115  RO  Ready to shoot, focus okay.  
+117   File numbering (Continuous=0, Auto Reset=1)  
+121  RW  Flash adjust mode (0=Auto, 1=Manual (see 127&141)  
+122  RO  Flash used in last shot (0,1 = Flash not used, Flash used)  
+127  RW  Flash exposure compensation (units: +/- 96 per 1 stop range, if #121=0)  
+133  RO  Manual Focus Mode (0,1 = Off,On)  
+141  RW  Manual flash output (units 0,1,2 from min to full, if #121=1)  
+143  RW  Flash Mode (0,1,2 = flash auto, flash on, flash off)  
+145   IS (0,1,2,3 = continous, shoot only, panning, off)  
+149  RW  ISO Mode (0=auto, 1=high auto, 100=manual ISO 100 etc)  
+155  RW  Metering Method (0, 1, 2 = Evaluative, Spot, Center)  
+165  RW  Time lapse movie shoot interval (milli-seconds)  
+166   Movie frame rate  
+169   Video size mode (160=0, 320=1, 640=2, ?=3, 1280x720=4)  
+170   Video play mode (LP=0, SP=1)  
+184   My Colors (0 - 11): 0=Off, 1=Vivid, 2=Neutral, 3=B/W, 4=Sepia, 5=Positive Film, 6=Lighter Skin Tone, 7=Darker Skin Tone, 8=Vivid Red, 9=Vivid Green, 10=Vivid Blue, 11=Custom Color)  
+195   Optical Zoom position (0,1,2,3,4,5,6...125)  
+196   (? Scene dependent/ stays 0 when scene is black or when scene has optimal light)  
+206   Shooting in progress  
+208   Flash Ready (1 during shutter half press after metering if camera is going to use flash)  
+212   Review info (0=Off, 2=detailed, 3=focus check) [SX10]  
+213   Red-Eye (0 "Off", 1 "On")  
+218  RW  Picture Size (0,1,2,3,4,5,6,8 = L,M1,M2,M3,S,RAW (on g9),Postcard, W)  
+219  RO  Orientation Sensor (0,90,270)  
+220   Safety FE (0 "Off", 1 "On")  
+223   Timer Mode (0,1,2 = 2 Seconds, 10 Seconds, Custom), SX 200 IS & SD 780 0,1,2,3,4=Off, 2 Seconds, 10 Seconds, Custom, Face Detection  
+224   Timer Delay (ms) (can't override)  
+225   Custom Color: Sharpness (-2, -1, 0, 1, 2 = 254, 255, 0, 1, 2)  
+227   "long time exposure" indicator: 1 always in "Night snapshot" scene mode & when the exposure time is set to >= 1s  
+228  RW  Audio channels (0=1ch, 1=2ch). Right channel mute if 2ch selected.  
+229  RW  Audio sample rate (0=11025, 1=22050, 2=44100)  
+230  RW  Audio sample format (0=u8, 1=s16le). U8 gives "Unidentified Image" in Play mode but works with other players.  
+233   Orientation stitch assistant (left to right=0, right to left=1)  
+245   Subject Dist 1 (equals id 65 on the A590)  
+246   Sv Market (for next shot, updates on half-shoot), 96 per 1 stop  
+247   Sv (for next shot, updates on half-shoot), 96 per 1 stop  
+249   Digital Zoom position, same as #95, 0-6 on a590  
+251   Optical Zoom position, same as #192, 0-128 on [SX10], same as #195 on a590, 0-7 on a590  
+252   Manual focus: equal value like 65, 245  
+254   Focus related, -1 for infinity  
+262  RW  Tv (for next shot, updates on half-shoot), 96 per 1 stop  
+264  RW  User Tv (user selected value in M/Tv modes, writes become effective on LCD on half shoot), 96 per 1 stop  
+268   White Balance Mode (0,1,2,3,4,5,6,7 = Auto, Day Light, Cloudy, Tungsten, Fluorescent, Fluorescent H, Flash [SX10], Custom)  
+269   White Balance Value (Middle around 900. Less corrects red and higher corrects blue. Can't override.)  
+277   Safety MF (0 "Off", 1 "On")  
+280   RAW+JPG (Raw+Jpg off = 0, Raw+Jpg on = 1)  
+290   iContrast setting (0=off, 1=on) [SX10]  
+293   Servo AF (0=off, 1=on) [SX10]  
+294   Aspect / Widescreen (1=widescreen, 0=standard) [SX1] ([1])  
+296  RO  ND filter status (0 off, 1 on) for manual mode. NOT updated in auto modes (SD990). Note: you can write to it, but actual ND state doesn't change.  
+297   ??? ([SX10],[SD990]: 1 after half-press)  
+

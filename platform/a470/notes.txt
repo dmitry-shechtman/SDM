@@ -1,0 +1,5 @@
+****************************************
+
+Camera depending notes: 
+
+- dryos camera
