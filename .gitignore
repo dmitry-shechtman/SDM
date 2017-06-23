@@ -1,0 +1,8 @@
+*.o
+*.a
+*.exe
+*.bin
+*.bin.dump
+*.BIN
+*.elf
+*.elf.syms
